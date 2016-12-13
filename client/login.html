@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <meta name="google-signin-client_id" content="795485120668-g9bvskc0h1fgp6v1u2n1ll06otvg6f9g.apps.googleusercontent.com">
+    <title>GAuth Tutorial</title>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="cookie.js"></script>
+
+    <h1 id="title">Reservationator</h1>
+    <div id="myg-signin2"></div>
+    <script>
+          function onFailure(error) {
+            console.log(error);
+          }
+          function onSignIn(){}
+          function renderButton() {
+            gapi.signin2.render('myg-signin2', {
+              'scope': 'profile email',
+              'width': 240,
+              'height': 50,
+              'longtitle': true,
+              'theme': 'dark',
+              'onsuccess': onSignIn,
+              'onfailure': onFailure
+            });
+          }
+    </script>
+    
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <script src="login.js"></script>
+
+</html>
