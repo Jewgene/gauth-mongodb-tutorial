@@ -1,8 +1,10 @@
 {
-    "name" : "GAuth Tutorial Server",
+    "name" : "guath-tutorial-server",
+    "description" : "Server for this tutorial demonstrating GAuth Login/Authentication and user storage.",
     "version" : "1.0.0",
     "url" : "https://github.com/NathanJewell/gauth-mongodb-tutorial",
     "author" : {"name" : "Nathan Jewell"},
+    "license" : "MIT",
     "dependencies" :
     {
         "http" : "latest",
