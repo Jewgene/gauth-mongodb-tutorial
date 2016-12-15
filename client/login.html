@@ -1,8 +1,9 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="login.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">   <!-- Common Google font. I use this for all displayed text. -->
+    <link rel="stylesheet" type="text/css" href="login.css">                                        <!-- Including the stylesheet I use. Feel free to use your own. It is a very minimal example. -->
+    <!-- This is the important head part. Google can use the id here to verify that the app is a legitimate one.-->
     <meta name="google-signin-client_id" content="480527435971-nuitcq6p2in3rssd85o2edmo36g0erm7.apps.googleusercontent.com">
     <title>GAuth Tutorial</title>
   </head>
@@ -10,14 +11,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
     <h1 id="title">GAuth Tutorial</h1>
-    <div id="myg-signin2"></div>
+    <div id="myg-signin2"></div>           <!-- This div will end up holding the actual sign-in button -->
     <script>
-          function onFailure(error) {
+          function onFailure(error) {      //Gotta catch those errors.
             console.log(error);
           }
-          function onSignIn(){}
-          function renderButton() {
-            gapi.signin2.render('myg-signin2', {
+          function onSignIn(){}             //predeclaring
+          function renderButton() {         //function to actually create button. Make sure to conform to Google branding guidelines.
+            gapi.signin2.render('myg-signin2', {    //referencing the div
               'scope': 'profile email',
               'width': 240,
               'height': 50,
@@ -28,8 +29,8 @@
             });
           }
     </script>
-    
-    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-    <script src="login.js"></script>
+
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>  <!-- Including the google platform -->
+    <script src="login.js"></script>    <!-- linking to definitions and clientside server communication fxns -->
   </body>
 </html>
