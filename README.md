@@ -23,11 +23,11 @@ Keep in mind that I’m assuming you have a basic knowledge of html/css/javascri
 
 First, you’re going to need to login with your (or your organization's) Google account and create a new project. [Link to console...](https://console.developers.google.com/apis/library) Give it a name, and make sure to note the project ID (it may have some alphanumeric parts depending on your project’s name.)
 
-![alt text](https://github.com/NathanJewell/gauth-mongodb-tutorial/tutorial/images/screencap1.png)
+![alt text](https://raw.githubusercontent.com/NathanJewell/gauth-mongodb-tutorial/master/tutorial/images/screencap1.png)
 
 Once you’ve made the project, you need to generate a for authenticating the authentication of your users with Google’s servers. Go to the credentials tab then the “OAuth consent screen” tab - you will have to enter a “Product name shown to users” before creating the key.  Then go back to the “Credentials” tab and click Create credentials -> OAuth Client ID.
 
-![alt text](https://github.com/NathanJewell/gauth-mongodb-tutorial/tutorial/images/screencap2.png)
+![alt text](https://raw.githubusercontent.com/NathanJewell/gauth-mongodb-tutorial/master/tutorial/images/screencap2.png)
 
 You should be prompted with a screen. Fill in the options as shown to the left. It is important to specify the javascript origin and redirect url so that our NodeJS server will be authorized to communicate with the project.  If you run your server on a different host, make sure this matches the domain you are using.
 
@@ -60,7 +60,7 @@ The <meta> tag is where all the magic happens. “name” should always be “go
 
 The “content”, however, will be different for your application than it is for mine. The content is the OAuth ClientID key that you generated before and is found in the Google API Console. Copy and paste that into the content section so your users can login.
 
-![alt text](https://github.com/NathanJewell/gauth-mongodb-tutorial/tutorial/images/screencap3.png)
+![alt text](https://raw.githubusercontent.com/NathanJewell/gauth-mongodb-tutorial/master/tutorial/images/screencap3.png)
 
 Now we write a bit of code to create the login button. Keep in mind, Google has specific guidelines about how their button should look, so make sure to follow those if you want to modify the size/border/etc.. [Branding Guidelines](https://developers.google.com/identity/branding-guidelines)
 
