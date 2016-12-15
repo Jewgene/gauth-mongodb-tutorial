@@ -7,17 +7,8 @@ var mongoClient = require("mongodb").MongoClient;
 var assert = require("assert");
 
 
-
-
-
-
-
 //INITIALIZING MONGODB
-<<<<<<< HEAD
 var url = 'mongodb://localhost:27017/gauth-tut';  //this is where the local database will be hosted. 27017 is the default port and gauth-tut will be the name of the database
-=======
-var url = 'mongodb://localhost:27017/reservationator';  //this is where the local database will be hosted. 27017 is the default port and reservationator will be the name of the database
->>>>>>> 6d8f697c0246c3858343b9a8c04149d03756c5ce
 
 function mongo() {  //quick wrapper for improving usability of database connection.
     return mongoClient.connect(url);
